@@ -1,0 +1,21 @@
+version: '3'
+
+tasks:  
+  fmt:
+    desc: "Formate imports"
+    cmds:
+      - goimports -w .
+
+  lint:
+    desc: "Start lint"
+    cmds:
+      - golangci-lint run --config .golangci.yaml ./...
+    sources:
+      - "**/*.go"
+
+  test:
+    desc: "Statr unit-tests"
+    cmds:
+      - go test -v -race -coverprofile=coverage.out ./...
+    sources:
+      - "**/*.go"
