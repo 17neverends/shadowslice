@@ -94,3 +94,6 @@ The standard Go slice causes GC pauses when growing, as it requires allocating a
 | `Len() (int, int)` | Returns lengths of internal slices. | - | `(mainSliceLen, growSliceLen)` |
 | `Cap() (int, int)` | Returns capacities of internal slices. | - | `(mainSliceCap, growSliceCap)` |
 | `String() string` | Returns debug information about internal state. | - | String with state description |
+
+# Overall: why named shadow?
+![2d0da3b0eb24078e7434676b9eb63d58](https://github.com/user-attachments/assets/0eb7cfe5-9921-4714-b0ec-ed4373119312)
